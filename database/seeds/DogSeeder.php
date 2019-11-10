@@ -10,9 +10,9 @@ class DogSeeder extends Seeder
      *
      * @return void
      */
-    public function run()
+    public function run(): void
     {
-        $dogs = factory(App\Dog::class, 10000)->make()->toArray();
+        $dogs = factory(App\Dog::class, 100000)->make()->toArray();
         foreach ($dogs as $dog) {
             Dog::create($dog);
         }

@@ -14,3 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+
+Route::prefix('dogs')->group(function () {
+    Route::get('search', 'DogController@search');
+});
